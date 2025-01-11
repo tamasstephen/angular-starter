@@ -14,4 +14,8 @@ import { UserComponent } from './components/user/user.component';
 export class AppComponent {
   title = 'starter-angular';
   users = signal(DUMMY_USERS);
+
+  onSelectUser(id: string) {
+    console.log(`Selected user: ${id}`);
+  }
 }
