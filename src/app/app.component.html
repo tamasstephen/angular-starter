@@ -1,8 +1,8 @@
 <app-header />
 
 <main class="main">
-  <ul id="users" *ngFor="let user of users()">
-    <li>
+  <ul id="users">
+    <li *ngFor="let user of users()">
       <app-user
         [id]="user.id"
         [avatar]="user.avatar"
@@ -10,6 +10,7 @@
         (select)="onSelectUser($event)" />
     </li>
   </ul>
+  <div>TASKS OF THAT USER</div>
 </main>
 
 <router-outlet />
