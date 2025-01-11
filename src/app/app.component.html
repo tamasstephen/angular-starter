@@ -1,5 +1,11 @@
+<app-header />
+
 <main class="main">
-  <app-header></app-header>
+  <ul id="users" *ngFor="let user of users()">
+    <li>
+      <app-user [avatar]="user.avatar" [name]="user.name" />
+    </li>
+  </ul>
 </main>
 
 <router-outlet />
